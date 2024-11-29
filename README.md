@@ -1,8 +1,8 @@
 # Why choose PlayWright over other frameworks?
 I prefer to choose Playwright for this assignment because it offers various options like:<br>
-Support multi-browser,  which you can easily set headless: false to see real-time automation. Playwright supports Chromium, Firefox, and WebKit<br>
-Debugging tools, to find out the failure reason faster and debug issues step-by-step.<br>
-Flexibility with both UI and API testing. In case of APIs, it helps to simplify backend testing process.<br>
+    Support multi-browser,  which you can easily set headless: false to see real-time automation. Playwright supports Chromium, Firefox, and WebKit<br>
+    Debugging tools, to find out the failure reason faster and debug issues step-by-step.<br>
+    Flexibility with both UI and API testing. In case of APIs, it helps to simplify backend testing process.<br>
 
 ## Setup
 1. We are going to skip some initial setup like installing Node.js, npm, ...
