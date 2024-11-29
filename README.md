@@ -19,28 +19,28 @@ Flexibility with both UI and API testing. In case of APIs, it helps to simplify 
 
 AUTOMATIONWITHPLAYWRIGHT/
 │
-├── .github/                     # GitHub-related configurations
-├── node_modules/                # Node.js dependencies
+├── .github/                     
+├── node_modules/                
 ├── pages/                       # Page Object Models (POMs)
 │   ├── CollectionPage.ts        # Handles collections and requests
 │   ├── SignInPage.ts            # Handles sign-in functionality
 │
-├── playwright-report/           # Playwright test reports
-├── test-results/                # Test results directory
+├── playwright-report/           
+├── test-results/                
 ├── TestCases/                   # Manual test case files
 │   ├── Collection.yaml          # Test cases for collections
 │   ├── SignIn.yaml              # Test cases for sign-in
 │
 ├── tests/                       # Automated test files
-│   ├── col1.spec.ts             # Tests for collection "col1"
-│   ├── col2.spec.ts             # Tests for collection "col2"
+│   ├── col1.spec.ts             # Tests for "col1"
+│   ├── col2.spec.ts             # Tests for "col2"
 │   ├── SignIn.spec.ts           # Tests for sign-in functionality
 │   ├── SignInWithWorkSpace.spec.ts # Tests for sign-in with workspace selection
 │
 ├── .env                         # Environment variables
-├── .gitignore                   # Ignored files for Git
-├── package.json                 # Project dependencies
-├── package-lock.json            # Lock file for npm dependencies
+├── .gitignore                  
+├── package.json               
+├── package-lock.json          
 ├── playwright.config.ts         # Playwright configuration
 └── README.md                    # Project documentation
 
