@@ -1,0 +1,165 @@
+This file is include all test cases both success and fail scenario:
+```markdown
+# Manual Test Cases
+
+Assumption: Postman sign in needs human verification to handle this we cosider test cases are implemented on staging environment.
+
+## Test Case: Collection
+
+#### Create Success Scenarios
+
+##### Test Case 1
+- **Description**: User can create an unconfigured collection named "col1".
+- **Precondition**: User needs to have account and sign in first
+- **Steps**:
+  1. Navigate to the workspace.
+  2. Click on the "Collections" tab.
+  3. Click the "New" button.
+  4. Enter "col1" as the collection name in the input field.
+  5. Save the collection by clicking the "Save" button.
+- **Expected_Result**: The collection named "col1" is successfully created and visible in the list.
+
+---
+
+##### Test Case 2
+- **Description**: User can create an unconfigured collection named "col2".
+- **Precondition**: User needs to have account and sign in first
+- **Steps**:
+  1. Navigate to the workspace.
+  2. Click on the "Collections" tab.
+  3. Click the "New Collection" button.
+  4. Enter "col2" as the collection name in the input field.
+  5. Save the collection by clicking the "Save" button.
+- **Expected_Result**: The collection named "col2" is successfully created and visible in the list.
+
+---
+
+#### Create Failure Scenarios
+
+##### Test Case 3
+- **Description**: User tries to create an unconfigured collection with a duplicate name ("col1").
+- **Precondition**: A collection named "col1" already exists.
+- **Steps**:
+  1. Navigate to the workspace.
+  2. Click on the "Collections" tab.
+  3. Click the "New Collection" button.
+  4. Enter "col1" as the collection name in the input field.
+  5. Save the collection by clicking the "Save" button.
+- **Expected_Result**: An error message "A collection with this name already exists".
+
+---
+
+##### Test Case 4
+- **Description**: User tries to create a collection with a empty name.
+- **Precondition**: User must be signed in to the workspace.
+- **Steps**:
+  1. Navigate to the workspace.
+  2. Click on the "Collections" tab.
+  3. Click the "New Collection" button.
+  4. Leave the collection name input field empty.
+  5. Save the collection by clicking the "Save" button.
+- **Expected_Result**: An error message "Collection name is required".
+
+---
+
+#### Adding Requests Success Scenarios
+
+##### Test Case 5
+- **Description**: Add a GET request with Postman echo endpoint in "col1".
+- **Precondition**: User needs to have account and sign in first - Collection "col1" must exist
+- **Steps**:
+  1. Navigate to the workspace.
+  2. Click on the "Collections" tab.
+  3. Select "col1".
+  4. Click the "New" button.
+  5. In opened pop-up, select "HTTP".
+  6. Enter "https://postman-echo.com/get" for request URL.
+  7. Leave the request type as "GET" (default).
+  8. Enter "TestGET" in the "Request Name" input field.
+  9. Save the request.
+- **Expected_Result**: The GET request will successfully add to "col1".
+
+---
+
+##### Test Case 6
+- **Description**: Add a POST request with Postman echo endpoint in "col1".
+- **Precondition**: User needs to have account and sign in first - Collection "col1" must exist.
+- **Steps**:
+  1. Navigate to the workspace.
+  2. Click on the "Collections" tab.
+  3. Select "col1".
+  4. Click the "New" button.
+  5. In opened pop-up, select ensure "HTTP".
+  6. Enter "https://postman-echo.com/post" for request URL.
+  7. Change the request type to "POST" by clicking the "GET" dropdown and selecting "POST".
+  8. Enter "TestPOST" in the "Request Name" input field.
+  9. Save the request.
+- **Expected_Result**: The POST request will successfully add to "col1".
+
+---
+
+##### Test Case 7
+- **Description**: Add a gRPC request to the Postman echo endpoint in "col2".
+- **Precondition**: User needs to have account and sign in first - Collection "col2" must exist.
+- **Steps**:
+  1. Navigate to the workspace.
+  2. Click on the "Collections" tab.
+  3. Select "col2".
+  4. Click the "New" button.
+  5. In opened pop-up, select "gRPC" as the request type.
+  6. Enter "https://postman-echo.com/post" as the gRPC endpoint.
+  7. Enter "TestGRPC" in the "Request Name" input field.
+  8. Save the request.
+- **Expected_Result**: The gRPC request will successfully add to "col2".
+
+---
+
+#### Failure Scenarios
+
+##### Test Case 8
+- **Description**: Try to save a GET request to "col1" without a name.
+- **Precondition**: User needs to have account and sign in first - Collection "col1" already exist.
+- **Steps**:
+  1. Navigate to the workspace.
+  2. Click on the "Collections" tab.
+  3. Select "col1".
+  4. Click the "New" button.
+  5. In opened pop-up, ensure "HTTP" is selected.
+  6. Enter "https://postman-echo.com/get" as the request URL.
+  7. Leave the "Request Name" input field empty.
+  8. Save the request.
+- **Expected_Result**: An error message "Request name is required".
+
+---
+
+##### Test Case 9
+- **Description**: Try to save a POST request to "col1" without a URL.
+- **Precondition**: User needs to have account and sign in first - Collection "col1" must exist.
+- **Steps**:
+  1. Navigate to the workspace.
+  2. Click on the "Collections" tab.
+  3. Select "col1".
+  4. Click the "New" button to add a request.
+  5. In opened pop-up, Select "HTTP".
+  6. Leave the request URL field empty.
+  7. Change the request type to "POST".
+  8. Enter "TestPOST" in the "Request Name" input field.
+  9. Save the request.
+- **Expected_Result**: An error message "Request URL is required".
+
+---
+
+#### Test Case 10
+- **Description**: Try to save a gRPC request to "col2" without a name.
+- **Precondition**: User needs to have account and sign in first - Collection "col2" must already exist.
+- **Steps**:
+  1. Navigate to the workspace.
+  2. Click on the "Collections" tab.
+  3. Select "col2".
+  4. Click the "New" button.
+  5. In opened pop-up, select "gRPC" as the request type.
+  6. Enter "https://postman-echo.com/get" as the gRPC endpoint.
+  7. Leave the "Request Name" input field empty.
+  8. Save the request.
+- **Expected_Result**: An error message "Request name is required".
+

@@ -1,0 +1,66 @@
+
+This file is include all test cases both success and fail scenario:
+```markdown
+# Manual Test Cases
+
+Assumption: Postman sign in needs human verification to handle this we cosider test cases are implemented on staging environment.
+
+## Test Case: Sign In
+
+### Success scenario
+
+#### Test Case 1
+- **Description**: User try to signin with valid credential
+- **Precondition**: User needs to have account 
+- **Steps**:
+  1. Navigate to postman login page.
+  2. Enter valid username.
+  3. Enter valid password
+  4. Click on Sign in button
+- **Expected_Result**: User should see the workspace list.
+
+---
+
+#### Test Case 2
+- **Description**: User try to signin with valid credential and open a workspace
+- **Precondition**: User needs to have account 
+- **Steps**:
+  1. Navigate to the login page.
+  2. Enter valid username.
+  3. Enter valid password
+  4. Click on Sign in button
+  5. Select TestWS workspace.
+- **Expected_Result**: User is redirected to the TestWS workspace.
+
+---
+
+#### Test Case 3
+- **Description**: User signin through forget password
+- **Precondition**: User needs to have account 
+- **Steps**:
+  1. Navigate to the login page.
+  2. Click on forget password
+  3. Enter valid Email
+  4. Click on submit button
+  5. Email with reset password is sent to email
+  6. On email, Click on reset my passport
+  7. Enter new password
+  8. click on reset password
+  9. User will reirect to login
+  10. Sign in wilth new credential
+- **Expected_Result**: User should see the workspace list.
+
+---
+
+### Failed scenario
+
+#### Test Case 4
+- **Description**: User signin fail because of 
+- **Precondition**: User needs to have account 
+- **Steps**:
+  1. Navigate to postman login page.
+  2. Enter invalid username/password.
+  3. Click on Sign in button
+- **Expected_Result**: User should see error messages "Invalid username/password"
+
+
